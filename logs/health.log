@@ -1,0 +1,61 @@
+[34m======================================[0m
+[32m      Linux System Health Monitor[0m
+[34m======================================[0m
+Date & Time : Mon Jul 20 03:47:35 AM UTC 2026
+Hostname    : khushi
+Uptime      : up 36 minutes
+
+----------- CPU Load -----------
+ 0.07, 0.04, 0.02
+
+----------- Memory Usage -----------
+               total        used        free      shared  buff/cache   available
+Mem:            15Gi       2.2Gi        11Gi        33Mi       1.6Gi        12Gi
+Swap:          4.0Gi          0B       4.0Gi
+
+----------- Disk Usage -----------
+Filesystem                         Size  Used Avail Use% Mounted on
+tmpfs                              3.1G  1.8M  3.1G   1% /run
+/dev/mapper/ubuntu--vg-ubuntu--lv   30G   13G   17G  44% /
+tmpfs                              7.6G  8.0K  7.6G   1% /dev/shm
+efivarfs                           256K   19K  238K   8% /sys/firmware/efi/efivars
+none                               1.0M     0  1.0M   0% /run/credentials/systemd-journald.service
+tmpfs                              7.6G  8.0K  7.6G   1% /tmp
+none                               1.0M     0  1.0M   0% /run/credentials/systemd-resolved.service
+/dev/vda2                          2.0G  243M  1.6G  14% /boot
+/dev/vda1                          1.1G  6.6M  1.1G   1% /boot/efi
+none                               1.0M     0  1.0M   0% /run/credentials/systemd-networkd.service
+none                               1.0M     0  1.0M   0% /run/credentials/serial-getty@ttyAMA0.service
+tmpfs                              1.6G   80K  1.6G   1% /run/user/1000
+
+Checking Disk Usage...
+[32mOK:[0m /run is 1% used
+[32mOK:[0m / is 44% used
+[32mOK:[0m /dev/shm is 1% used
+[32mOK:[0m /sys/firmware/efi/efivars is 8% used
+[32mOK:[0m /run/credentials/systemd-journald.service is 0% used
+[32mOK:[0m /tmp is 1% used
+[32mOK:[0m /run/credentials/systemd-resolved.service is 0% used
+[32mOK:[0m /boot is 14% used
+[32mOK:[0m /boot/efi is 1% used
+[32mOK:[0m /run/credentials/systemd-networkd.service is 0% used
+[32mOK:[0m /run/credentials/serial-getty@ttyAMA0.service is 0% used
+[32mOK:[0m /run/user/1000 is 1% used
+
+------ Top 5 CPU Processes ------
+    PID COMMAND         %CPU
+   3068 gnome-shell      2.3
+   3981 ptyxis           1.5
+   3153 ibus-daemon      0.2
+   1617 containerd       0.1
+   3516 ibus-engine-sim  0.0
+
+------ Top 5 Memory Processes ------
+    PID COMMAND         %MEM
+   3981 ptyxis           2.8
+   3068 gnome-shell      2.7
+   3784 mutter-x11-fram  1.0
+   4305 fwupd            0.5
+   3212 evolution-alarm  0.4
+
+[32mHealth Check Completed Successfully![0m
