@@ -1,4 +1,5 @@
 🖥️ Linux System Health Monitor
+
 A lightweight Linux System Health Monitoring Tool built with Bash scripting. The script gathers key system information, reports CPU load, memory and disk usage, lists resource-intensive processes, and saves monitoring output to a log file.
 
 🚀 Project Links
@@ -49,6 +50,7 @@ Logging	Monitoring output appended to logs/health.log
 The script is intended for lightweight, local monitoring. It is not a replacement for a full monitoring platform.
 
 📁 Project Structure
+
 linux-system-health-monitor/
 ├── health_monitor.sh   # Main Bash monitoring script
 ├── logs/
