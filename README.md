@@ -1,166 +1,153 @@
-🖥️ Linux System Health Monitor
+# 🖥️ Linux System Health Monitor
 
-A lightweight Linux System Health Monitoring Tool built with Bash scripting. The script gathers key system information, reports CPU load, memory and disk usage, lists resource-intensive processes, and saves monitoring output to a log file.
+A lightweight **Linux System Health Monitoring Tool** built using Bash scripting. It collects system information, monitors CPU load, memory and disk usage, identifies resource-intensive processes, and stores monitoring output in a log file.
 
-🚀 Project Links
-- 💻 Source Code: Linux System Health Monitor
+## 🚀 Project Overview
 
-📌 Project Overview
+This project automates basic Linux system health checks using Bash and standard Linux command-line utilities. It helps users inspect resource utilization and review monitoring output through log files.
 
-System resource monitoring helps users understand the current state of a Linux machine and identify processes or resources that may need attention.
+## ✨ Features
 
-This project uses Bash and standard Linux command-line utilities to collect system information and present it in a readable terminal report. It also appends the monitoring output to a log file for later review.
+- 🖥️ **System Information:** Displays hostname, date, time, and uptime.
+- ⚙️ **CPU Monitoring:** Reports system load averages.
+- 🧠 **Memory Monitoring:** Displays RAM and swap statistics.
+- 💾 **Disk Monitoring:** Reports filesystem utilization and disk usage warnings.
+- 📊 **Process Monitoring:** Lists the top five CPU-consuming and memory-consuming processes.
+- 🎨 **Terminal Output:** Presents monitoring information in a readable format.
+- 📝 **Automatic Logging:** Appends monitoring output to `logs/health.log`.
 
-The system:
+## 🛠️ Technologies Used
 
-- Displays the hostname, date/time, and system uptime
-- Reports CPU load averages
-- Shows RAM and swap statistics
-- Reports filesystem disk usage
-- Lists the top five processes by CPU usage
-- Lists the top five processes by memory usage
-- Displays status messages and disk-usage warnings
-- Saves monitoring output to a log file
+| Technology | Purpose |
+|---|---|
+| Linux / Ubuntu | Operating environment |
+| Bash | Automation and scripting |
+| Linux utilities | System resource monitoring |
+| Git | Version control |
+| GitHub | Source code hosting |
 
-🎯 Objectives
-The main objectives of this project are:
+## 📁 Project Structure
 
-1. Practice Linux system administration commands.
-2. Use Bash to automate routine system checks.
-3. Monitor CPU, memory, and disk usage.
-4. Identify processes that consume significant system resources.
-5. Save monitoring output for later inspection.
-6. Practice project version control using Git and GitHub.
-
-⚙️ How It Works
-
-The Bash script runs a sequence of Linux commands, formats their output, displays a report in the terminal, and appends the report to a log file.
-
-Monitoring Areas
-
-Area	Information Collected
-System information	Date/time, hostname, and uptime
-CPU	System load averages
-Memory	RAM and swap statistics, including calculated RAM usage
-Disk	Filesystem usage and disk-usage warning threshold
-Processes	Top five processes by CPU and memory usage
-Logging	Monitoring output appended to logs/health.log
-
-
-The script is intended for lightweight, local monitoring. It is not a replacement for a full monitoring platform.
-
-📁 Project Structure
-
+```text
 linux-system-health-monitor/
-├── health_monitor.sh      # Main Bash monitoring script
+├── health_monitor.sh
 ├── logs/
-│   └── health.log         # Generated monitoring log
-├── screenshots/           # Project screenshots, if added
-├── .gitignore             # Git ignore rules
-└── README.md              # Project documentation
+│   └── health.log
+├── screenshots/
+├── .gitignore
+└── README.md
+```
 
-🛠️ Technologies Used
-Scripting
-- Bash
+## 📋 Prerequisites
 
-Operating System and Utilities
-- Linux / Ubuntu
-- uptime
-- free
-- df
-- ps
-- awk
-- sed
-- tee
-
-Version Control
-- Git
-- GitHub
-
-📋 Prerequisites
-- A Linux environment such as Ubuntu
+- Ubuntu or another Linux distribution
 - Bash shell
 - Standard Linux command-line utilities
-- Git, if you want to clone or version-control the project
-The script is designed to use utilities commonly available on Ubuntu.
+- Git (for cloning the repository)
 
-🚀 Installation
-1. Clone the Repository
+## 🚀 Installation
+
+**1. Clone the repository**
+
+```bash
 git clone https://github.com/khushichoudhary950/linux-system-health-monitor.git
+```
 
-2. Enter the Project Directory
+**2. Navigate to the project directory**
+
+```bash
 cd linux-system-health-monitor
+```
 
-3. Make the Script Executable
+**3. Make the script executable**
+
+```bash
 chmod +x health_monitor.sh
+```
 
-▶️ Run the Monitor
-Run the script from the project directory:
+## ▶️ Run the Project
+
+Execute the monitoring script:
+
+```bash
 ./health_monitor.sh
-If needed, you can also run it through Bash:
+```
+
+Alternatively, run it using Bash:
+
+```bash
 bash health_monitor.sh
-The script displays a system health report in the terminal and appends its output to the log file.
+```
 
-📊 View Monitoring Logs
-The script writes monitoring output to:
-logs/health.log
-Display the complete log:
+The script displays the monitoring report in the terminal and appends its output to the log file.
+
+## 📊 View Monitoring Logs
+
+**Display the complete log**
+
+```bash
 cat logs/health.log
-Display the most recent entries:
+```
+
+**Display the latest 20 entries**
+
+```bash
 tail -n 20 logs/health.log
-Follow new log entries as they are written:
+```
+
+**Follow new log entries in real time**
+
+```bash
 tail -f logs/health.log
-Press Ctrl + C to stop following the log.
+```
 
-🔍 Troubleshooting
-Permission Denied
-Make the script executable and try again:
-chmod +x health_monitor.sh
-./health_monitor.sh
-Check Bash Syntax
+Press `Ctrl + C` to stop following the log.
+
+## 🔍 Troubleshooting
+
+**Check Bash syntax**
+
+```bash
 bash -n health_monitor.sh
-If this command reports an error, fix the reported syntax before relying on the script's output.
-Check the Log File
+```
+
+**Fix execution permission**
+
+```bash
+chmod +x health_monitor.sh
+```
+
+**Inspect monitoring logs**
+
+```bash
 cat logs/health.log
-If the log file is missing, run the script and check that it completes successfully.
+```
 
-💡 Key Features
-Lightweight Monitoring
-Uses Bash and standard Linux utilities to collect basic system metrics.
+## 🎯 Learning Outcomes
 
-Resource Visibility
-Shows CPU load, memory statistics, disk utilization, and resource-intensive processes in one report.
-
-Log History
-Appends monitoring output to a log file so previous reports can be reviewed.
-
-Linux Command-Line Practice
-Combines common system commands with shell scripting, output formatting, and file redirection.
-
-🔮 Future Improvements
-Possible future enhancements include:
-- Add configurable CPU, RAM, and disk thresholds
-- Correctly validate and test RAM warning logic
-- Display an overall system health score
-- Add timestamps and clearer log formatting
-- Automate periodic checks using cron
-- Add log rotation to prevent unbounded log growth
-- Generate summary reports from historical logs
-- Add screenshots of sample terminal output
-- Add optional email or notification alerts
-
-📚 Learning Outcomes
-This project provides practice with:
-- Bash scripting and executable permissions
-- Linux system monitoring commands
-- Variables, conditionals, pipes, and command substitution
-- CPU, RAM, and disk usage inspection
-- Process monitoring with ps
-- Output redirection and log files
+- Linux system administration fundamentals
+- Bash scripting and conditional statements
+- CPU, RAM, and disk monitoring
+- Process inspection using Linux utilities
+- File redirection and log management
 - Git and GitHub version control
-- Writing project documentation
 
-👩‍💻 Author
-Khushi Choudhary
-- GitHub: @khushichoudhary950
-- Project Repository: linux-system-health-monitor
+## 🔮 Future Improvements
+
+- Configurable CPU, RAM, and disk thresholds
+- Improved memory usage alerts
+- Overall system health score
+- Scheduled monitoring using cron
+- Log rotation and summary reports
+- Email or notification alerts
+
+## 👩‍💻 Author
+
+**Khushi Choudhary**
+
+- **GitHub:** [@khushichoudhary950](https://github.com/khushichoudhary950)
+- **Project:** [Linux System Health Monitor](https://github.com/khushichoudhary950/linux-system-health-monitor)
+
+---
+
+*Built as a hands-on project to practice Linux system administration and Bash scripting.*
