@@ -5,6 +5,7 @@ A lightweight Linux System Health Monitoring Tool built with Bash scripting. The
 - 💻 Source Code: Linux System Health Monitor
 
 📌 Project Overview
+
 System resource monitoring helps users understand the current state of a Linux machine and identify processes or resources that may need attention.
 
 This project uses Bash and standard Linux command-line utilities to collect system information and present it in a readable terminal report. It also appends the monitoring output to a log file for later review.
