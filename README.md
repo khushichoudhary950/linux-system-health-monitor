@@ -32,6 +32,7 @@ The main objectives of this project are:
 6. Practice project version control using Git and GitHub.
 
 ⚙️ How It Works
+
 The Bash script runs a sequence of Linux commands, formats their output, displays a report in the terminal, and appends the report to a log file.
 
 Monitoring Areas
