@@ -7,6 +7,9 @@ RED="\e[31m"
 BLUE="\e[34m"
 RESET="\e[0m"
 
+# Health Score
+HEALTH_SCORE=100
+
 # Log file
 LOG_DIR="logs"
 LOG_FILE="$LOG_DIR/health.log"
@@ -31,6 +34,20 @@ uptime | awk -F'load average:' '{print $2}'
 echo ""
 echo "----------- Memory Usage -----------"
 free -h
+
+echo ""
+echo "------------RAM Status------------------"
+
+RAM_USED=$(free | awk '/Mem:/ {printf("%.0f"), $3/$2 * 100}')
+
+echo "RAM Used : ${RAM_USED}%"
+
+if [ "$RAM_USED" -ge 80]; then
+	echo -e "${RED}WARNING: Hihj RAM Usage${RESET}"
+	HEATH_SCORE=$((HEATH_SCORE-20))
+else
+	echo -e "${GREEN}RAM Status : OK${RESET}"
+fi
 
 echo ""
 echo "----------- Disk Usage -----------"
