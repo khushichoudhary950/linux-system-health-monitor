@@ -52,12 +52,12 @@ The script is intended for lightweight, local monitoring. It is not a replacemen
 📁 Project Structure
 
 linux-system-health-monitor/
-├── health_monitor.sh   # Main Bash monitoring script
+├── health_monitor.sh      # Main Bash monitoring script
 ├── logs/
-│   └── health.log      # Generated monitoring log
-├── screenshots/        # Project screenshots, if added
-├── .gitignore          # Git ignore rules
-└── README.md           # Project documentation
+│   └── health.log         # Generated monitoring log
+├── screenshots/           # Project screenshots, if added
+├── .gitignore             # Git ignore rules
+└── README.md              # Project documentation
 
 🛠️ Technologies Used
 Scripting
