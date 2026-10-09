@@ -36,6 +36,7 @@ The main objectives of this project are:
 The Bash script runs a sequence of Linux commands, formats their output, displays a report in the terminal, and appends the report to a log file.
 
 Monitoring Areas
+
 Area	Information Collected
 System information	Date/time, hostname, and uptime
 CPU	System load averages
